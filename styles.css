@@ -1,0 +1,62 @@
+/* CSS file placeholder. */
+#main
+{
+  text-align: center;
+}
+
+#game-board > table
+{
+  margin: 0 auto;
+}
+
+#game-board > table th
+{
+  margin: 0;
+  padding: 0.125em 0.25em;
+  line-height: 100%;
+}
+
+#game-board > table .cell
+{
+  background: #c9c9c9;
+  border: 1px solid #7c7c7c;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+
+#game-board > table .cell > .disc
+{
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 1em;
+  margin: 0.25em;
+}
+
+#game-board > table .cell.maru > .disc
+{
+  background: #fff;
+  background-image: url();
+}
+
+#game-board > table .cell.batu > .disc
+{
+  background: #000;
+}
+
+#game-record
+{
+  position : absolute ;
+  top : 0%;
+  bottom : 100%;
+  left : 70%;
+  right : 0%;
+
+  width:10em;
+  height:23em;
+  overflow-y:auto;
+
+  font-size:1.25em;
+  line-height:1.25em;
+}

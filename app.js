@@ -1,7 +1,6 @@
+var ref = new Firebase('https://torrid-torch-2431.firebaseio.com/');
 
-function start(myDataRef) {
-  firebase = myDataRef;
-
+function start() {
   keypress();
   notifier();
 }
@@ -11,14 +10,14 @@ function keypress() {
     if( e.keyCode == 13) {
       var name = $('#name').val();
       var text = $('#message').val();
-      firebase.push({name: name, text: text});
+      ref.push({name: name, text: text});
       $('#message').val('');
     }
   });
 }
 
 function notifier() {
-  firebase.on('child_added', function(snapshot) {
+  ref.on('child_added', function(snapshot) {
     var message = snapshot.val();
     display(message.name, message.text);
   });
